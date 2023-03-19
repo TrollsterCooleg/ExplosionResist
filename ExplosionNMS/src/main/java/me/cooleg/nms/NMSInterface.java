@@ -4,4 +4,6 @@ public interface NMSInterface {
 
     void setResistance(String s, float f);
 
+    void resetResistances();
+
 }

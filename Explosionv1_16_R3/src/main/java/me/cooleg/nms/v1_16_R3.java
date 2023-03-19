@@ -10,6 +10,7 @@ import java.util.HashMap;
 public class v1_16_R3 implements NMSInterface{
 
     private final HashMap<String, Block> getBlock = new HashMap<>();
+    private final HashMap<Block, Float> originalValues = new HashMap<>();
     private Field resistanceField;
 
     public v1_16_R3() {
@@ -34,7 +35,18 @@ public class v1_16_R3 implements NMSInterface{
     public void setResistance(String s, float f) {
         if (!getBlock.containsKey(s.toUpperCase())) {return;}
         try {
+            Block b = getBlock.get(s.toUpperCase());
+            originalValues.put(b, resistanceField.getFloat(b));
             resistanceField.set(getBlock.get(s.toUpperCase()), f);
         } catch (IllegalAccessException ex) {}
+    }
+
+    @Override
+    public void resetResistances() {
+        for (Block b : originalValues.keySet()) {
+            try {
+                resistanceField.set(b, originalValues.get(b));
+            } catch (IllegalAccessException ex) {}
+        }
     }
 }

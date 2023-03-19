@@ -40,4 +40,9 @@ public class ExplosionResistance extends JavaPlugin {
             nms.setResistance(s, (float) section.getDouble(s));
         }
     }
+
+    @Override
+    public void onDisable() {
+        nms.resetResistances();
+    }
 }
