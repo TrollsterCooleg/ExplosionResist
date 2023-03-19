@@ -1,0 +1,4 @@
+main: me.cooleg.explosionresistance.ExplosionResistance
+name: ExplosionResistance
+version: 1.0
+api-version: 1.16

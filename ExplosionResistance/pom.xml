@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>me.cooleg</groupId>
+        <artifactId>ExplosionResist</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <packaging>jar</packaging>
+    <artifactId>ExplosionResistance</artifactId>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.19.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
+            <artifactId>ExplosionNMS</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
+            <artifactId>Explosionv1_19_R3</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
+            <artifactId>Explosionv1_19_R2</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
+            <artifactId>Explosionv1_19_R1</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
+            <artifactId>Explosionv1_18_R2</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
+            <artifactId>Explosionv1_16_R3</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+</project>

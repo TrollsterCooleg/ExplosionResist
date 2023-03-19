@@ -1,0 +1,6 @@
+config:
+  ## Names from here SHOULD work:
+  ## https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+
+  ## Example to give grass block a really high blast resistance
+  grass_block: 5000.5
