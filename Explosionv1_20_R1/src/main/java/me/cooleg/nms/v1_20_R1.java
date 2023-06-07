@@ -1,27 +1,28 @@
 package me.cooleg.nms;
 
-import net.minecraft.server.v1_16_R3.Block;
-import net.minecraft.server.v1_16_R3.BlockBase;
-import net.minecraft.server.v1_16_R3.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
 
-public class v1_16_R3 implements NMSInterface{
+public class v1_20_R1 implements NMSInterface {
 
     private final HashMap<String, Block> getBlock = new HashMap<>();
     private final HashMap<Block, Float> originalValues = new HashMap<>();
     private Field resistanceField;
 
-    public v1_16_R3() {
+    public v1_20_R1() {
         try {
             for (Field field : Blocks.class.getFields()) {
-                Block b = (Block) field.get(null);
-                getBlock.put(field.getName().toUpperCase(), b);
+                field.setAccessible(true);
+                net.minecraft.world.level.block.Block b = (Block) field.get(null);
+                getBlock.put(b.asItem().toString().toUpperCase(), b);
             }
         } catch (IllegalAccessException ex) {}
         try {
-            resistanceField = BlockBase.class.getDeclaredField("durability");
+            resistanceField = BlockBehaviour.class.getDeclaredField("aH");
             resistanceField.setAccessible(true);
         } catch (NoSuchFieldException ex) {
             System.out.println("Exception triggered :(");

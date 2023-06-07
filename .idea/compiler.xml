@@ -9,7 +9,7 @@
         <module name="Explosionv1_19_R2" />
         <module name="Explosionv1_18_R2" />
         <module name="Explosionv1_19_R3" />
-        <module name="Explosionv1_16_R3" />
+        <module name="Explosionv1_20_R1" />
         <module name="ExplosionResistance" />
         <module name="Explosionv1_19_R1" />
         <module name="ExplosionNMS" />
@@ -18,7 +18,6 @@
     <bytecodeTargetLevel>
       <module name="ExplosionReistance" target="1.8" />
       <module name="NMS" target="1.8" />
-      <module name="v1_16_R3" target="1.8" />
       <module name="v1_18_R2" target="1.8" />
       <module name="v1_19_R1" target="1.8" />
       <module name="v1_19_R2" target="1.8" />
