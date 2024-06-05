@@ -5,4 +5,4 @@ Supports:
 
 1.18.2
 All of 1.19
-All of 1.20
+1.20/ 1.20.1 i think? not sure havent tested
