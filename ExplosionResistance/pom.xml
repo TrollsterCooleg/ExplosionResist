@@ -35,6 +35,11 @@
         </dependency>
         <dependency>
             <groupId>me.cooleg</groupId>
+            <artifactId>Explosionv1_20_R3</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.cooleg</groupId>
             <artifactId>Explosionv1_20_R1</artifactId>
             <version>1.0</version>
         </dependency>
